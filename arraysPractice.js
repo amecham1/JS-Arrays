@@ -242,7 +242,19 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-  //Code Here
+function both(arr1,arr2){
+  var newArr = [];
+  for(var i = 0; i < arr1.length; i++) {
+    for(var j = 0; j < arr2.length; j++){
+      if(arr1[i] === arr2[j]) {
+        newArr.push(arr1[i]);
+
+    }
+    }
+  }
+
+  return newArr;
+}
 
 
 
@@ -282,12 +294,19 @@ var colt = {
 array with those four objects. After that console.log the length of the Array and make
 sure that it's equal to 4. */
 
-  //Code Here
+  devMountainEmployees.push(tyler);
+  devMountainEmployees.push(cahlan);
+  devMountainEmployees.push(ryan);
+  devMountainEmployees.push(colt);
 
 /*Now let's say Cahlan has a mental breakdown and has to take a leave of absence to 'find himself'.
 Loop through your devMountainEmployees until you find cahlan, then remove him from the array.*/
 
-  //Code Here
+for(var i = 0; i < devMountainEmployees.length; i++) {
+  if(devMountainEmployees[i] === cahlan){
+    devMountainEmployees.splice(i,1);
+  }
+}
 
 
 
@@ -329,7 +348,7 @@ of Data is to have an Array full of objects. */
 
 //Create an empty array called users.
 
-  //Code Here
+  var users = [];
 
 /*Now add three user objects to your users array. Each user object should contain the
 following properties. name, email, password, username.*/
@@ -342,8 +361,19 @@ var user1 = {
     username: 'infiniateLoop'
 };
 
-//Your Code Here
+var user2 = {
+    name: 'Andrew Mecham',
+    email: 'andrew.mecham@gmail.com',
+    password: 'JSiscool',
+    username: 'usersignin',
+};
 
+var user3 = {
+    name: 'Mckade Smith',
+    email: 'mckade@gmail.com',
+    password: 'ArrayMaster',
+    username: 'mckadeiscool',
+};
 /*Now you have a very common data structure. Twitter is a good use case.
 It's easy to imagine that your followers list on Twitter is an Array full or objects
 and those objects contain properties about the specific person you follow.*/
@@ -352,6 +382,10 @@ and those objects contain properties about the specific person you follow.*/
 objects until you find Tyler's account (use tylermcginnis33@gmail.com to find him).
 Once you find the particular index he's located in, delete him from the array.*/
 
-  //Code Here
+  for(var i = 0; i < users.length; i++) {
+    if(users[i].email === 'tylermcginnis33@gmail.com') {
+      users.splice(i,1);
+    }
+  }
 
 //The activity we just did is very much how data works in 'the real world'.
